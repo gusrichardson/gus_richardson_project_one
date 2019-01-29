@@ -16,8 +16,11 @@
 <body>
         <header>
                 <!-- TOP HALF OF HEADER CONTAINING NAV BAR AND TITLE -->
-                <div class="title-container">
-                        <div class="header-nav-container">
+                <div class="titleContainer">
+                        <div class="headerNavContainer">
+                                <div class="burgerNav">
+                                        <i class="fas fa-bars" id="burger-icon"></i>
+                                </div>
                                 <nav class="clearfix">
                                         <ul class="clearfix">
                                                 <li><a href="">Home</a></li>
@@ -30,8 +33,8 @@
                         <h1>Animal <br> Refuge</h1>
                 </div>
                 <!-- BOTTOM HALF OF HEADER CONTAINING FONT AWESOME ICONS -->
-                <div class="fa-container clearfix">
-                        <div class="fa-icons clearfix">
+                <div class="faContainer clearfix">
+                        <div class="faIcons clearfix">
                                 <i class="fab fa-instagram" aria-hidden="true"></i>
                                 <span class="sr-only">link to Instagram</span>
                                 <i class="fab fa-facebook-f" aria-hidden="true"></i>
@@ -46,11 +49,11 @@
         <!-- END OF HEADER BEGIN MAIN -->
         <main>
                 <!-- SUZIE THE CAT'S SECTION -->
-                <div class="suzie-wrapper clearfix">
-                        <div class="sz-img-container">
-                                <img src="images/image-6.png" alt="a Bengal Cat named Suzie relaxing on a pillow">
+                <div class="suzieWrapper clearfix">
+                        <div class="szImgContainer">
+                                <img src="images/image6.png" alt="a Bengal Cat named Suzie relaxing on a pillow">
                         </div>
-                        <div class="sz-text-container">
+                        <div class="szTextContainer">
                                 <h2>Suzie's Story</h2>
                                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed cupiditate impedit
                                         facilis beatae ipsam, eligendi quasi doloribus incidunt dolore ex qui
@@ -62,39 +65,39 @@
                 </div>
 
                 <!-- FRIENDS SECTION - LIZARD, SHEEP, PARROT PROFILES -->
-                <div class="friends-wrapper clearfix">
-                        <div class="friends-title">
-                                <div class="friends-title-text-container">
+                <div class="friendsWrapper clearfix">
+                        <div class="friendsTitle">
+                                <div class="friendsTitleTextContainer">
                                         <h2>Some of our friends</h2>
                                 </div>
                         </div>
-                        <div class="friends-img-container">
-                                <img src="images/image-2.jpg" alt="a green lizard on a branch">
+                        <div class="friendsImgContainer">
+                                <img src="images/image2.jpg" alt="a green lizard on a branch">
                         </div>
-                        <div class="friends-img-container">
-                                <img src="images/image-4.png" alt="a sheep faces the camera">
+                        <div class="friendsImgContainer">
+                                <img src="images/image4.png" alt="a sheep faces the camera">
                         </div>
-                        <div class="friends-img-container">
-                                <img src="images/image-3.png" alt="a parrot on a branch feeds itself">
+                        <div class="friendsImgContainer" id="parrotContainer">
+                                <img src="images/image3.png" alt="a parrot on a branch feeds itself" id="parrot">
                         </div>
                 </div>
 
                 <!-- CENTER NAV - LINKS TO EVENTS AND MERCHANDISE -->
-                <div class="centre-nav clearfix">
-                        <div class="nav-container">
-                                <div class="f-awesome">
+                <div class="centreNav clearfix">
+                        <div class="navContainer">
+                                <div class="fAwesome">
                                         <i class="fas fa-paw"></i>
                                 </div>
                                 <h3>Animal Spotlight</h3>
                         </div>
-                        <div class="nav-container">
-                                <div class="f-awesome">
+                        <div class="navContainer">
+                                <div class="fAwesome">
                                         <i class="fas fa-calendar-check"></i>
                                 </div>
                                 <h3>Events</h3>
                         </div>
-                        <div class="nav-container">
-                                <div class="f-awesome">
+                        <div class="navContainer">
+                                <div class="fAwesome">
                                         <i class="fas fa-shopping-bag"></i>
                                 </div>
                                 <h3>Merch</h3>
@@ -104,29 +107,38 @@
                 <!-- GRID SECTION FIRST ROW -->
                 <div class="grid">
                         <div class="row row1 clearfix">
-                                <div class="row-item">
-                                        <h2>Fascinating facts about zebras</h2>
-                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate ex,
-                                                animi nesciunt iure tenetur eligendi rem architecto at qui. Quisquam
-                                                placeat eum illo accusantium dolore commodi, quo ut delectus vitae!</p>
-                                        <button type="button">Read more</button>
-
+                                <div class="rowItem topRow">
+                                        <img src="images/image5.png" alt="two zebras stand next to each other in the wilderness">
                                 </div>
-                                <div class="row-item">
-                                        <img src="images/image-2.png" alt="two zebras stand next to each other in the wilderness">
+                                <div class="rowItem topRow">
+                                        <div class="textBox">
+                                                <h2>Fascinating facts about zebras</h2>
+                                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate
+                                                        ex,
+                                                        animi nesciunt iure tenetur eligendi rem architecto at qui.
+                                                        Quisquam
+                                                        placeat eum illo accusantium dolore commodi, quo ut delectus
+                                                        vitae!</p>
+                                                <button type="button">Read more</button>
+                                        </div>
+
                                 </div>
                         </div>
                         <!-- GRID SECTION SECOND ROW -->
                         <div class="row row2 clearfix">
-                                <div class="row-item">
-                                        <img src="images/image-2-copy.png" alt="a kitten places its paw against the hand of its owner">
+                                <div class="rowItem bottomRow">
+                                        <img src="images/image7.png" alt="a kitten places its paw against the hand of its owner">
                                 </div>
-                                <div class="row-item">
-                                        <h2>The bond between animals and humans</h2>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur illo
-                                                cum iste veniam odio, molestiae, explicabo qui minima culpa recusandae
-                                                optio modi similique sequi dolores quo vitae sint quam illum?</p>
-                                        <button type="button">Read more</button>
+                                <div class="rowItem bottomRow">
+                                        <div class="textBox">
+                                                <h2>The bond between animals and humans</h2>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                        Consequuntur illo
+                                                        cum iste veniam odio, molestiae, explicabo qui minima culpa
+                                                        recusandae
+                                                        optio modi similique sequi dolores quo vitae sint quam illum?</p>
+                                                <button type="button">Read more</button>
+                                        </div>
 
                                 </div>
                         </div>
@@ -136,9 +148,9 @@
         </main>
         <!-- FOOTER BEGINS -->
         <footer class="clearfix">
-                <div class="f-container footer-nav">
+                <div class="fContainer footerNav">
                         <nav>
-                                <ul>
+                                <ul class="clearfix">
                                         <li><a href="">Home</a></li>
                                         <li><a href="">Blog</a></li>
                                         <li><a href="">Gallery</a></li>
@@ -147,7 +159,7 @@
                         </nav>
 
                 </div>
-                <div class="f-middle-container subscribe">
+                <div class="fMiddleContainer subscribe">
                         <h3>Stay updated</h3>
                         <p>Subscribe to our newsletter to stay updated!</p>
                         <input type="email" class="email" placeholder="e-mail address">
@@ -155,7 +167,7 @@
 
 
                 </div>
-                <div class="f-container contact">
+                <div class="fContainer contact">
                         <h3>Contact</h3>
                         <p>animalrescue@gmail.gmail | 416-555-5555</p>
                         <p>123 Some Rd., Toronto, ON</p>

@@ -6,6 +6,9 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 
 html {
         font-size: 125%;
+        max-width: 100vw;
+        width: 100vw;
+        padding: 0;
 }
 
 body {
@@ -30,7 +33,7 @@ h3 {
 
 p {
         font-family: 'Roboto', sans-serif;
-        font-weight: 400;
+        font-weight: 300;
 }
 
 a {
@@ -38,6 +41,10 @@ a {
         color: white;
         text-transform: uppercase;
         font-family:'Cormorant Garamond', serif;
+}
+
+a:hover {
+        text-decoration: underline;
 }
 
 li {
@@ -63,7 +70,7 @@ button:hover {
 
 
 header {
-        background-image: url(images/image-1.png);
+        background-image: url(images/image1header.png);
         min-width: 100vw;
         height: 100vh;
         background-size: cover;
@@ -71,17 +78,34 @@ header {
         padding-top: 1px;
 }
 
-.header-nav-container {
+.burgerNav {
+        width: 40px;
+        height: 40px;
+        border: 1px solid red;
+        position: absolute;
+        top: 0px;
+        right: 20px;
+}
+
+#burger-icon {
+        font-size: 1.5rem;
+        visibility: hidden;
+        position: absolute;
+        top: 0;
+        right: 10px;
+}
+
+.headerNavContainer {
         padding-top: 20px;
         padding-left: 80px;
 }
 
-.header-nav-container li {
+.headerNavContainer li {
         float: left;
         margin: 10px;
 }
 
-.title-container {
+.titleContainer {
         padding-right: 300px;
         width: 100%;
         height: 50vh;
@@ -90,7 +114,7 @@ header {
 }
 
 
-.fa-container {
+.faContainer {
         width: 100%;
         height: 50vh;
         text-align: right;
@@ -98,7 +122,7 @@ header {
         position: relative;
 }
 
-.fa-icons {
+.faIcons {
         height: 200px;
         width: 80px;
         padding-top: 40px;
@@ -110,37 +134,43 @@ header {
 
 }
 
-.fa-icons i {
+.faIcons i {
         margin-top:14px;
         margin-right: 30px;
         float: right;
+        transition: all .5s;
 }
 
-.fa-icons i:nth-of-type(2) {
+.faIcons i:nth-of-type(2) {
         margin-right: 34px;
 }
 
-.suzie-wrapper {
+.faIcons i:hover {
+        transform: scale(1.2);
+        color: #c3d3cb;
+}
+
+.suzieWrapper {
         padding: 110px 160px;
         color: white;
 }
 
-.suzie-wrapper h2 {
+.suzieWrapper h2 {
         font-size: 2.5rem;
         margin: 0;
 }
 
-.suzie-wrapper button {
+.suzieWrapper button {
         background: white;
         color: #152d20;
 }
 
-.suzie-wrapper button:hover {
+.suzieWrapper button:hover {
         background: #c3d3cb;
         color: white;
 }
 
-.sz-img-container {
+.szImgContainer {
         position: relative;
         float: left;
         width: 315px;
@@ -148,74 +178,76 @@ header {
         margin-right: 40px;
 }
 
-.sz-img-container img {
+.szImgContainer img {
         width: 100%;
         height: auto;
         position: absolute;
 }
 
-.sz-back {
-        position: absolute;
-        width: 315px;
-        height: 315px;
-}
-
-.friends-wrapper {
+.friendsWrapper {
         padding: 110px 160px; 
         background: #c3d3cb;
 }
 
-.friends-title {
-        /* border: 1px solid red; */
+.friendsTitle {
         text-align: center;
 }
 
-.friends-title-text-container {
+.friendsTitleTextContainer {
         width: 40%;
-        /* border: 1px solid yellow; */
         text-align: center;
         margin: 0 auto;
 }
 
-.friends-title h2 {
+.friendsTitle h2 {
         margin-top: 0;
         padding-top: 0;
         font-size: 2.5rem;
         color: #152d20;
 }
 
-.friends-img-container {
+.friendsImgContainer {
        width: calc(33.33% - 20px);
        float: left;
 }
 
-.friends-img-container img {
+.friendsImgContainer img {
         width: 100%;
+        display: block;
 }
 
-.friends-img-container:nth-child(3) {
+.friendsImgContainer:nth-child(3) {
         margin: 0 30px;
 }
 
-.centre-nav {
+
+/* *** CENTRE NAVIGATION BEGINS *** */
+
+.centreNav {
         padding: 80px 300px 80px;
         padding-bottom: 100px;
         color: white;
 }
 
-.nav-container {
+.navContainer {
         width: 33.33%;
         float: left;
         text-align: center;
 }
 
-.nav-container:hover {
+.navContainer:hover {
         cursor: pointer;
 }
 
-.f-awesome i {
+.fAwesome i {
         font-size: 2.5rem;
 }
+
+/* *** CENTRE NAV ENDS *** */
+
+
+/* *** GRID SECTION *** */
+
 
 .grid {
         background: white;
@@ -230,26 +262,36 @@ header {
         color: #152d20;
 }
 
-.row-item {
+.rowItem {
         width: 50%;
+        height: 100%;
+}
+
+.topRow {
+        float: right;
+}
+
+.topRow .textBox {
+        padding: 120px 90px 20px 160px;
+}
+
+.bottomRow {
         float: left;
-        margin-bottom: 0;
-        padding-bottom: 0;
 }
 
-.row1 .row-item:nth-child(1) {
-        padding: 120px 90px 10px 160px;
+.bottomRow .textBox {
+        padding: 120px 160px 20px 90px;
 }
 
- .row2 .row-item:nth-child(2) {
-        padding: 120px 160px 10px 90px;
-}
-.row-item img {
+.rowItem img {
         min-height: 100%;
         width: 100%;
-        object-fit: scale-down;
         display: block;
 }
+
+/* *** GRID SECTION ENDS*** */
+
+/* *** FOOTER SECTION BEGINS *** */
 
 footer {
         padding: 92px 160px;
@@ -261,22 +303,21 @@ footer h3 {
         text-transform: uppercase;
 }
 
-.footer-nav li {
-        /* margin-top: 10px; */
+.footerNav li {
         font-family:'Cormorant Garamond', serif;
         line-height: 1.45;
 }
 
-.f-container {
+.fContainer {
         width: 30%;
         float: left;
 }
 
-.f-container:nth-child(3) {
+.fContainer:nth-child(3) {
         text-align: right;
 }
 
-.f-middle-container {
+.fMiddleContainer {
         width: 40%;
         float: left;
         text-align: center;
@@ -297,7 +338,10 @@ footer h3 {
         font-family: 'Cormorant Garamond', serif;
         text-transform: uppercase;
         font-weight: 600;
+}
 
+.submit-button:hover {
+        transform: scale(1.1);
 }
 
 .copyright {
@@ -311,3 +355,181 @@ footer h3 {
 .copyright p {
         margin: 0;
 }
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1250px) {
+
+
+        .titleContainer {
+                padding-right: 240px;
+        }
+
+        .topRow .textBox {
+                padding: 40px 60px 20px 60px;
+        }
+
+        .bottomRow .textBox {
+                padding: 40px 60px 20px 60px;
+        }
+
+        button {
+                font-size: .8rem;
+                height: 40px;
+                width: 120px;
+        }
+        .suzieWrapper, .friendsWrapper {
+                 padding: 80px 120px;
+        }
+      }
+
+      @media (max-width: 955px) {
+        
+        .titleContainer {
+                padding-right: 140px;
+        }
+
+        .headerNavContainer {
+                padding-left: 10px;
+                text-align: left;
+        }
+
+        .headerNavContainer li {
+                float: none;
+        }
+
+        a {
+                font-size: .8rem;
+        }
+
+        .row1 .rowItem:nth-child(1) {
+                font-size: .8rem;
+        }
+        
+         .row2 .rowItem:nth-child(2) {
+                font-size: .8rem;
+        }
+        button {
+                font-size: .7rem;
+                height: 40px;
+                width: 100px;
+        }
+      }
+
+      @media (max-width: 800px) {
+                .headerNavContainer {
+                        position: absolute;
+                        right: 0;
+                        top: 20px;
+                        visibility: hidden;
+                }
+
+                #burger-icon {
+                        visibility: visible;
+                }
+               
+      }
+
+      @media (max-width: 600px) {
+        header {
+                background-image: url(images/image1Mobile.png);
+                min-width: 100vw;
+                height: 100vh;
+                background-size: cover;
+                background-position: center center;
+                padding-top: 1px;
+        }
+        .suzieWrapper {
+                padding:40px 20px; 
+        }
+
+        .szImgContainer {
+                float: none;
+                max-width: 100%;
+        }
+
+        .szImgContainer img {
+                max-height: 100%;
+        }
+
+        .szTextContainer {
+                float: none;
+        }
+
+       
+
+        .friendsWrapper {
+                text-align: center;
+                padding: 0;
+        }
+
+        #parrotContainer {
+                display: none;
+        }
+
+        #parrot {
+                /* position: relative; */
+                display: none;
+        }
+
+       
+        .friendsTitle h2 {
+                font-size: 1.5rem;
+        }
+
+        .friendsWrapper {
+                padding-bottom: 20px;
+                position: relative;
+        }
+
+        .friendsImgContainer:nth-child(3) {
+                margin: 0;
+        }
+
+        .friendsImgContainer {
+                width: calc(50% - 20px);
+                float: left;
+                margin: 0px 10px;
+                padding: 1px;
+         }
+        
+
+        .navContainer {
+                float: none;
+                border: 1px solid red;
+        }
+
+
+        .rowItem {
+                float: none;
+                width: 100%;
+                border: 1px solid blue;
+        }
+
+        .fContainer, .fMiddleContainer {
+                float: none;
+                width: 100%;
+                text-align: center;
+        }
+
+        .fContainer:nth-child(3) {
+                text-align: center;
+        }
+
+        footer {
+                padding: 40px 20px;
+        }
+
+        .footerNav ul {
+                border: 1px solid red;
+        }
+
+        .footerNav li {
+                float: left;
+                padding: 10px;
+                margin: 0 auto;
+        }
+
+        
+
+      }
