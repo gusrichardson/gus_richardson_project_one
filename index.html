@@ -30,7 +30,9 @@
                                         </ul>
                                 </nav>
                         </div>
-                        <h1>Animal <br> Refuge</h1>
+                        <div class="titleTextContainer">
+                                <h1>Animal <br> Refuge</h1>
+                        </div>
                 </div>
                 <!-- BOTTOM HALF OF HEADER CONTAINING FONT AWESOME ICONS -->
                 <div class="faContainer clearfix">
@@ -160,11 +162,14 @@
 
                 </div>
                 <div class="fMiddleContainer subscribe">
-                        <h3>Stay updated</h3>
-                        <p>Subscribe to our newsletter to stay updated!</p>
-                        <input type="email" class="email" placeholder="e-mail address">
-                        <input type="submit" value="subscribe" class="submit-button">
-
+                        <form action="">
+                                <h3>Stay updated</h3>
+                                <p>Subscribe to our newsletter to stay updated!</p>
+                                <label for="e-mail" class="visuallyhidden">Input E-mail Address</label>
+                                <input type="email" class="email" placeholder="e-mail address" id="e-mail">
+                                <label for="submit" class="visuallyhidden">Submit</label>
+                                <input type="submit" value="subscribe" class="submit-button" id="submit">
+                        </form>
 
                 </div>
                 <div class="fContainer contact">

@@ -16,8 +16,8 @@ body {
         padding: 0;
 }
 
-h1 {
-        font-size: 4rem;
+ h1 {
+        font-size: 5rem;
         font-family:'Fredericka the Great', cursive; 
         text-transform: uppercase;
 }
@@ -68,6 +68,19 @@ button:hover {
        color: #152d20;
 }
 
+.visuallyhidden:not(:focus):not(:active) {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
+        padding: 0;
+        white-space: nowrap;
+        clip-path: inset(100%);
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+      }
+
 
 header {
         background-image: url(images/image1header.png);
@@ -81,7 +94,6 @@ header {
 .burgerNav {
         width: 40px;
         height: 40px;
-        border: 1px solid red;
         position: absolute;
         top: 0px;
         right: 20px;
@@ -171,7 +183,6 @@ header {
 }
 
 .szImgContainer {
-        position: relative;
         float: left;
         width: 315px;
         height: 315px;
@@ -181,7 +192,7 @@ header {
 .szImgContainer img {
         width: 100%;
         height: auto;
-        position: absolute;
+        display: block;
 }
 
 .friendsWrapper {
@@ -340,10 +351,6 @@ footer h3 {
         font-weight: 600;
 }
 
-.submit-button:hover {
-        transform: scale(1.1);
-}
-
 .copyright {
         background-color: black;
         color:white;
@@ -360,17 +367,33 @@ footer h3 {
 
 @media (max-width: 1250px) {
 
+        .titleTextContainer {
+                text-align: left;
+                position: absolute;
+                top: 60px;
+                right: 20%;
+        }
+
+        h1 {
+                font-size: 4rem;
+        }
+
 
         .titleContainer {
                 padding-right: 240px;
         }
 
+        .centreNav {
+                padding: 80px 200px;
+                color: white;
+        }
+
         .topRow .textBox {
-                padding: 40px 60px 20px 60px;
+                padding: 20px 40px 20px 50px;
         }
 
         .bottomRow .textBox {
-                padding: 40px 60px 20px 60px;
+                padding: 20px 50px 20px 40px;
         }
 
         button {
@@ -380,6 +403,19 @@ footer h3 {
         }
         .suzieWrapper, .friendsWrapper {
                  padding: 80px 120px;
+        }
+
+        footer {
+                padding: 80px;
+        }
+
+        .email {
+                width: 100%;
+                text-align: center;
+        }
+
+        .submit-button {
+                width: 100%;
         }
       }
 
@@ -399,24 +435,54 @@ footer h3 {
         }
 
         a {
-                font-size: .8rem;
+                font-size: .9rem;
         }
 
-        .row1 .rowItem:nth-child(1) {
-                font-size: .8rem;
+        .friendsTitleTextContainer {
+                width: 80%;
         }
-        
-         .row2 .rowItem:nth-child(2) {
-                font-size: .8rem;
+
+        .centreNav {
+                padding: 70px 160px;
+                color: white;
         }
+
+        .textBox {
+                font-size: .9rem;
+        }
+
         button {
                 font-size: .7rem;
                 height: 40px;
                 width: 100px;
         }
+
+        footer {
+                padding: 40px;
+        }
+      }
+
+      @media (max-width: 890px) {
+        .rowItem {
+                float: none;
+                width: 100%;
+        }
       }
 
       @media (max-width: 800px) {
+
+
+                .titleTextContainer {
+                        text-align: left;
+                        position: absolute;
+                        top: 10px;
+                        left: 23px;
+                }
+
+                h1 {
+                        font-size: 2rem;
+                }
+
                 .headerNavContainer {
                         position: absolute;
                         right: 0;
@@ -426,6 +492,61 @@ footer h3 {
 
                 #burger-icon {
                         visibility: visible;
+                        width: 40px;
+                        height: 23px;
+                }
+
+                .suzieWrapper {
+                        text-align: center;
+                }
+
+                .szImgContainer {
+                        float: none;
+                        /* width: 80%; */
+                        height: auto;
+                        margin: 0 auto;
+                }
+
+                .szTextContainer {
+                        text-align: left;
+                }
+
+                .centreNav {
+                        padding: 40px 120px;
+                        color: white;
+                }
+
+                /* .rowItem {
+                        float: none;
+                        width: 100%;
+                } */
+                .textBox {
+                        text-align: center;
+                }
+
+                .footerNav li {
+                        display: inline;
+                        padding: 0px 20px;
+                        margin: 0 auto;
+                }
+
+                .fContainer, .fMiddleContainer {
+                        float: none;
+                        width: 100%;
+                        text-align: center;
+                }
+        
+                .fContainer:nth-child(3) {
+                        text-align: center;
+                }
+
+                .email {
+                        width: 70%;
+                        text-align: center;
+                }
+        
+                .submit-button {
+                        width: 70%;
                 }
                
       }
@@ -439,6 +560,11 @@ footer h3 {
                 background-position: center center;
                 padding-top: 1px;
         }
+
+        h1 {
+                font-size: 1.7rem;
+        }
+
         .suzieWrapper {
                 padding:40px 20px; 
         }
@@ -456,11 +582,9 @@ footer h3 {
                 float: none;
         }
 
-       
-
         .friendsWrapper {
                 text-align: center;
-                padding: 0;
+                padding: 40px 0;
         }
 
         #parrotContainer {
@@ -468,14 +592,9 @@ footer h3 {
         }
 
         #parrot {
-                /* position: relative; */
                 display: none;
         }
 
-       
-        .friendsTitle h2 {
-                font-size: 1.5rem;
-        }
 
         .friendsWrapper {
                 padding-bottom: 20px;
@@ -493,17 +612,19 @@ footer h3 {
                 padding: 1px;
          }
         
+        .centreNav {
+                text-align: center;
+        }
 
         .navContainer {
                 float: none;
-                border: 1px solid red;
+                display: inline;
         }
 
 
         .rowItem {
                 float: none;
                 width: 100%;
-                border: 1px solid blue;
         }
 
         .fContainer, .fMiddleContainer {
@@ -512,22 +633,8 @@ footer h3 {
                 text-align: center;
         }
 
-        .fContainer:nth-child(3) {
-                text-align: center;
-        }
-
         footer {
                 padding: 40px 20px;
-        }
-
-        .footerNav ul {
-                border: 1px solid red;
-        }
-
-        .footerNav li {
-                float: left;
-                padding: 10px;
-                margin: 0 auto;
         }
 
         
