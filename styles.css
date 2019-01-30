@@ -84,6 +84,7 @@ button:hover {
         overflow: hidden;
       }
 
+      /* *** HEADER SECTION BEGINS *** */
 
 header {
         background-image: url(images/image1header.png);
@@ -129,6 +130,8 @@ header {
 }
 
 
+/* FONT-AWESOME SOCIAL MEDIA  ICONS */
+
 .faContainer {
         width: 100%;
         height: 50vh;
@@ -165,6 +168,12 @@ header {
         color: #c3d3cb;
 }
 
+/* *** END OF HEADER *** */
+
+/* *** START OF MAIN ** */
+
+/* SUZIE THE CAT SECTION */
+
 .suzieWrapper {
         padding: 110px 160px;
         color: white;
@@ -197,6 +206,10 @@ header {
         height: auto;
         display: block;
 }
+
+/* END OF SUZIE THE CAT SECTION */
+
+/* OUR FRIENDS SECTION */
 
 .friendsWrapper {
         padding: 110px 160px; 
@@ -233,7 +246,7 @@ header {
 .friendsImgContainer:nth-child(3) {
         margin: 0 30px;
 }
-
+/* END OF OUR FRIENDS SECTION */
 
 /* *** CENTRE NAVIGATION BEGINS *** */
 
@@ -261,6 +274,15 @@ header {
 
 
 /* *** GRID SECTION *** */
+
+.mobileImage {
+        display: none;
+}
+
+.mobileImage img {
+        width: 100%;
+        display: block;
+}
 
 
 .grid {
@@ -371,6 +393,8 @@ footer h3 {
         margin: 0;
 }
 
+/* *** END OF FOOTER *** */
+
 /* MEDIA QUERIES */
 
 @media (max-width: 1250px) {
@@ -476,6 +500,14 @@ footer h3 {
                 width: 100%;
         }
 
+        .rowItem img {
+                display: none;
+        }
+
+        .mobileImage {
+                display: block;
+        }
+
         .rowItem .textBox {
                 padding: 60px 40px;
         }
@@ -541,7 +573,6 @@ footer h3 {
 
                 .szImgContainer {
                         float: none;
-                        /* width: 80%; */
                         height: auto;
                         margin: 0 auto;
                 }
@@ -633,18 +664,6 @@ footer h3 {
         .navContainer {
                 float: none;
                 display: inline;
-        }
-
-
-        .rowItem {
-                float: none;
-                width: 100%;
-        }
-
-        .fContainer, .fMiddleContainer {
-                float: none;
-                width: 100%;
-                text-align: center;
         }
 
         footer {
