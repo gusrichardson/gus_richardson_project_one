@@ -29,11 +29,14 @@ h2 {
 
 h3 {
         font-family:'Cormorant Garamond', serif;
+        font-weight: 600;
+        text-transform: uppercase;
 }
 
 p {
         font-family: 'Roboto', sans-serif;
-        font-weight: 300;
+        font-weight: lighter;
+        line-height: 1.45;
 }
 
 a {
@@ -92,10 +95,10 @@ header {
 }
 
 .burgerNav {
-        width: 40px;
-        height: 40px;
+        /* width: 40px;
+        height: 40px; */
         position: absolute;
-        top: 0px;
+        top: 20px;
         right: 20px;
 }
 
@@ -340,7 +343,7 @@ footer h3 {
         font-family: 'Roboto', sans-serif;
 }
 
-.submit-button {
+.submitButton {
         background: black;
         color: white;
         border: black;
@@ -349,6 +352,11 @@ footer h3 {
         font-family: 'Cormorant Garamond', serif;
         text-transform: uppercase;
         font-weight: 600;
+}
+
+.submitButton:hover {
+        background: #c3d3cb;
+        color: black;
 }
 
 .copyright {
@@ -414,7 +422,7 @@ footer h3 {
                 text-align: center;
         }
 
-        .submit-button {
+        .submitButton {
                 width: 100%;
         }
       }
@@ -467,6 +475,37 @@ footer h3 {
                 float: none;
                 width: 100%;
         }
+
+        .rowItem .textBox {
+                padding: 60px 40px;
+        }
+
+        .fContainer, .fMiddleContainer {
+                float: none;
+                width: 100%;
+                text-align: center;
+                padding: 15px 0;
+        }
+
+        .footerNav li {
+                display: inline;
+                padding: 0px 20px;
+                margin: 0 auto;
+        }
+
+        .fContainer:nth-child(3) {
+                text-align: center;
+        }
+
+        .email {
+                width: 70%;
+                text-align: center;
+        }
+
+        .submitButton {
+                width: 70%;
+        }
+
       }
 
       @media (max-width: 800px) {
@@ -516,37 +555,8 @@ footer h3 {
                         color: white;
                 }
 
-                /* .rowItem {
-                        float: none;
-                        width: 100%;
-                } */
                 .textBox {
                         text-align: center;
-                }
-
-                .footerNav li {
-                        display: inline;
-                        padding: 0px 20px;
-                        margin: 0 auto;
-                }
-
-                .fContainer, .fMiddleContainer {
-                        float: none;
-                        width: 100%;
-                        text-align: center;
-                }
-        
-                .fContainer:nth-child(3) {
-                        text-align: center;
-                }
-
-                .email {
-                        width: 70%;
-                        text-align: center;
-                }
-        
-                .submit-button {
-                        width: 70%;
                 }
                
       }
@@ -563,6 +573,10 @@ footer h3 {
 
         h1 {
                 font-size: 1.7rem;
+        }
+
+        .suzieWrapper h2, .friendsTitle h2 {
+                font-size: 2rem;
         }
 
         .suzieWrapper {
@@ -637,6 +651,33 @@ footer h3 {
                 padding: 40px 20px;
         }
 
+        .email {
+                width: 80%;
+        }
+
+        .submitButton {
+                width: 80%;
+        }
+
+      }
+
+      @media (max-width: 520px) {
         
+        footer {
+                padding: 20px 10px;
+        }
+
+        a {
+                font-size: .8rem;
+        }
+        
+        .footerNav {
+                width: 100%;
+                padding: 0;
+                margin: 0;
+        }
+        .footerNav li {
+                padding: 0 5px;
+        }
 
       }
